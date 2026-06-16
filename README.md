@@ -1,21 +1,27 @@
-# Image to Audio Generator using AWS
+# AWS Serverless Image-to-Audio Converter
 
-## Project Overview
+This project implements a serverless architecture on AWS to convert text extracted from images into audio files automatically.
 
-This project automatically converts uploaded images into audio descriptions.
+## 🎯 Project Overview
+This tool automates the process of image analysis and speech conversion. When an image is uploaded to S3, the system triggers a pipeline that reads the text (labels) and converts it into a speech-enabled MP3 file.
 
-### Workflow
+## 🛠️ Tech Stack & AWS Services
+* **Amazon S3:** Used for image storage and hosting the output audio files.
+* **AWS Lambda:** Executes the serverless Python code to bridge services.
+* **Amazon Rekognition:** Performs image analysis to detect labels/text.
+* **Amazon Polly:** Converts extracted text into human-like speech.
 
-1. Upload image to Amazon S3
-2. S3 triggers AWS Lambda
-3. Lambda sends image to Amazon Rekognition
-4. Rekognition detects labels
-5. Amazon Polly converts labels into speech
-6. MP3 is stored in S3
+## 🏗️ Workflow
+1. **Upload:** User uploads an image to the source S3 bucket.
+2. **Trigger:** The S3 event triggers the AWS Lambda function.
+3. **Analysis:** Lambda sends the image to Amazon Rekognition for label detection.
+4. **Conversion:** The detected text/labels are passed to Amazon Polly to generate speech.
+5. **Storage:** The final MP3 file is saved into the destination S3 bucket.
 
-## AWS Services Used
+## 🚀 Key Learnings
+* Understanding **Event-Driven Architecture** in AWS.
+* Experience in integrating **Serverless services** (Lambda, S3, Rekognition, Polly).
+* Writing and deploying Python code in an AWS Lambda environment.
 
-- Amazon S3
-- AWS Lambda
-- Amazon Rekognition
-- Amazon Polly
+## 📬 Contact
+Connect with me on [LinkedIn](https://www.linkedin.com/in/pallavi_baske)
