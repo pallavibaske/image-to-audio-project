@@ -79,3 +79,12 @@ image-to-audio-project/
 
 - LinkedIn: https://www.linkedin.com/in/pallavi-baske-6a0b80216
 - GitHub: https://github.com/pallavibaske
+
+- ---
+
+## 🚀 Future Enhancements
+
+- OCR Text Extraction Support
+- Multi-language Audio Generation
+- Web Dashboard
+- Email Notifications
