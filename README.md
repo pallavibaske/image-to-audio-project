@@ -82,9 +82,4 @@ image-to-audio-project/
 
 - ---
 
-## 🚀 Future Enhancements
 
-- OCR Text Extraction Support
-- Multi-language Audio Generation
-- Web Dashboard
-- Email Notifications
