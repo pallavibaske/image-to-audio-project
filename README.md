@@ -1,27 +1,81 @@
 # AWS Serverless Image-to-Audio Converter
 
-This project implements a serverless architecture on AWS to convert text extracted from images into audio files automatically.
-
 ## 🎯 Project Overview
-This tool automates the process of image analysis and speech conversion. When an image is uploaded to S3, the system triggers a pipeline that reads the text (labels) and converts it into a speech-enabled MP3 file.
 
-## 🛠️ Tech Stack & AWS Services
-* **Amazon S3:** Used for image storage and hosting the output audio files.
-* **AWS Lambda:** Executes the serverless Python code to bridge services.
-* **Amazon Rekognition:** Performs image analysis to detect labels/text.
-* **Amazon Polly:** Converts extracted text into human-like speech.
+This project demonstrates a serverless AWS solution that automatically converts image content into speech. When an image is uploaded to an Amazon S3 bucket, an AWS Lambda function is triggered. The Lambda function uses Amazon Rekognition to analyze the image and Amazon Polly to generate an MP3 audio file.
 
-## 🏗️ Workflow
-1. **Upload:** User uploads an image to the source S3 bucket.
-2. **Trigger:** The S3 event triggers the AWS Lambda function.
-3. **Analysis:** Lambda sends the image to Amazon Rekognition for label detection.
-4. **Conversion:** The detected text/labels are passed to Amazon Polly to generate speech.
-5. **Storage:** The final MP3 file is saved into the destination S3 bucket.
+---
 
-## 🚀 Key Learnings
-* Understanding **Event-Driven Architecture** in AWS.
-* Experience in integrating **Serverless services** (Lambda, S3, Rekognition, Polly).
-* Writing and deploying Python code in an AWS Lambda environment.
+## 🛠️ AWS Services Used
 
-## 📬 Contact
-Connect with me on [LinkedIn](https://www.linkedin.com/in/pallavi_baske)
+- Amazon S3
+- AWS Lambda
+- Amazon Rekognition
+- Amazon Polly
+- IAM
+
+---
+
+## 🔄 Workflow
+
+1. Upload an image to the S3 bucket.
+2. S3 triggers the Lambda function.
+3. Lambda sends the image to Amazon Rekognition.
+4. Rekognition detects labels/text from the image.
+5. Lambda sends the detected content to Amazon Polly.
+6. Polly generates an MP3 audio file.
+7. The MP3 file is stored in the output S3 bucket.
+
+---
+
+## ✨ Features
+
+- Serverless Architecture
+- Automatic S3 Event Trigger
+- Image Analysis using Amazon Rekognition
+- Text-to-Speech Conversion using Amazon Polly
+- Automatic MP3 File Generation
+
+---
+
+## 📂 Repository Structure
+
+```
+image-to-audio-project/
+├── lambda_function.py
+├── README.md
+├── LICENSE
+├── Architecture/
+└── Screenshots/
+```
+
+---
+
+## 🚀 Future Enhancements
+
+- OCR Text Extraction
+- Multi-language Audio Support
+- Web Dashboard
+- Email Notifications
+
+---
+
+## 📚 Skills Demonstrated
+
+- AWS Cloud
+- Amazon S3
+- AWS Lambda
+- Amazon Rekognition
+- Amazon Polly
+- IAM
+- Python
+- Serverless Computing
+
+---
+
+## 👩‍💻 Author
+
+**Pallavi Baske**
+
+- LinkedIn: https://www.linkedin.com/in/pallavi-baske-6a0b80216
+- GitHub: https://github.com/pallavibaske
